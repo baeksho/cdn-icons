@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="format-detection" content="telephone=no">
+
+<title>롯데카드 - 페이지를 찾을 수 없습니다.</title>
+<link href="//image.lottecard.co.kr/webapp/pc/images/favicon/favicon.ico" rel="shortcut icon">
+<link href="//image.lottecard.co.kr/webapp/mobile/images/favicon/apple_touch_icon_72.png" rel="shortcut icon">
+<link href="//image.lottecard.co.kr/webapp/mobile/images/favicon/apple_touch_icon_144.png" rel="apple-touch-icon">
+<link href="//image.lottecard.co.kr/webapp/pc/css/p_font.css" rel="stylesheet" type="text/css">
+<link href="//image.lottecard.co.kr/webapp/pc/css/p_common.css" rel="stylesheet" type="text/css">
+<link href="//image.lottecard.co.kr/webapp/pc/css/p_contents.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var gvImgUrl = "//image.lottecard.co.kr";   
+</script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/jquery-3.2.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/pc/js/p_selectbox.js"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/eiwaf/eiwaf-1.0.0.js" charset="utf-8"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/eiwaf/mobile.comn.js" charset="utf-8"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/util.biz.js" charset="utf-8"></script>
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/util.comn.js" charset="utf-8"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(function() {
+		eiwaf_InitDocumentReady();
+	});
+//]]>	
+</script>
+</head>
+
+<!--[if ie 8]><html class="lt-ie8" lang="ko"><![endif]-->
+<!--[if ie 9]><html class="lt-ie9" lang="ko"><![endif]-->
+<!--[if gte ie 10]><html class="lt-ie10" lang="ko"><![endif]-->
+<body>
+
+	
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer4','GTM-565KC6FP');
+
+function GA_Event(category, action, label) {
+    dataLayer.push({
+        'event' : 'ga_event', 'layerCategory' : category, 'layerAction' : action, 'layerLabel' : label
+    });
+    dataLayer.push({
+        'layerLabel' : undefined
+    });
+}
+</script>
+<!-- End Google Tag Manager -->
+
+<div class="errorBox">
+	<div class="inner">
+		
+		<h2 class="tit" role="text">롯데카드 홈페이지가 새롭게 단장했습니다.</h2>
+
+		<p class="txt" role="text">아래 버튼을 클릭하시면 새롭게 리뉴얼된 롯데카드 홈페이지를 이용하실 수 있습니다.</p>
+
+		<div class="btnArea">
+			<a href="/" class="btnLP btnL action">롯데카드 홈페이지</a>
+		</div>
+		
+	</div>
+</div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-565KC6FP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script type="text/javascript" src="//image.lottecard.co.kr/webapp/mobile/js/p_script_LP.js"></script>
+</body>
+</html>
+
+
