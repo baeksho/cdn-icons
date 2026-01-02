@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>RISS</title>
+    <link rel="icon" type="image/x-icon" href="/commons/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/commons/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/commons/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/commons/css/error.css" />
+</head>
+<body>
+<div class="error">
+    <strong>서비스 이용에 불편을 드려 죄송합니다.</strong>
+    <span>다음과 같은 사유로 인하여 이 페이지가 표시됩니다.</span>
+    <ul class="">
+        <li>원하시는 웹페이지를 찾을 수 없거나 다른 메뉴로 이동한 경우</li>
+        <li>서비스 수행 중 일시적인 장애가 발생한 경우</li>
+        <li>이용의 폭주로 서비스가 지연되는 경우</li>
+        <li>해당 페이지에 대한 접근이 허가되지않은 경우</li>
+    </ul>
+    <p>
+        <a href="/index.do" class="errorBt1">RISS 초기화면</a>
+        <a href="#redirect" onclick="javascript:history.back();" class="errorBt2">이전 페이지</a>
+    </p>
+    </div>
+</body>
+</html>
