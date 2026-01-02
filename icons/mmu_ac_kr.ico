@@ -1,0 +1,2990 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+		<title>국립목포해양대학교</title>
+	
+	
+
+    <link href='/css/main/common.css?1616464391000' type="text/css" rel="stylesheet">
+
+	
+    <link href='/css/main/main.css?1616464391000' type="text/css" rel="stylesheet">
+    
+    
+
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+	<link href='/css/default/jsTree/style.css' type="text/css" rel="stylesheet">
+	<link href='/css/exms/plugins/toastr/toastr.min.css' type="text/css" rel="stylesheet">
+    <meta name="format-detection" content="telephone=no" >
+    <meta name="description" content="메인화면 - 국립목포해양대학교">
+    <meta name="keywords" content="국립목포해양대학교">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="메인화면 - 국립목포해양대학교">
+    <meta property="og:description" content="메인화면 - 국립목포해양대학교">
+	<meta property="og:url" content="http://www.mmu.ac.kr/">
+    <meta name="robots" content="index,follow">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+	<script src="/js/main/front.js"></script>
+	<script src="/js/main/main.js" async></script>
+	<script src='/js/exms/plugins/jsTree/jstree.min.js' async></script>
+    <script src='/js/exms/plugins/jasny/jasny-bootstrap.min.js' async></script>
+
+    <script src='/js/jquery.scroltable.min.js' async></script>
+	
+	<!-- Toastr script -->
+	<script src='/js/exms/plugins/toastr/toastr.min.js'></script>
+
+    
+	<script src='/js/main/redirect/jquery.redirect.js' async></script>
+
+    
+	<link rel="stylesheet" type="text/css" href='/js/trumbowyg/ui/trumbowyg.css'>
+	<link rel="stylesheet" type="text/css" href='/js/trumbowyg/plugins/colors/ui/trumbowyg.colors.min.css'>
+	<link rel="stylesheet" type="text/css" href='/js/trumbowyg/plugins/table/ui/trumbowyg.table.min.css'>
+	<link rel="stylesheet" type="text/css" href='/js/trumbowyg/ui/trumbowyg.min.css'>
+	<link rel="stylesheet" type="text/css" href='/js/trumbowyg/plugins/specialchars/ui/trumbowyg.specialchars.min.css'>
+
+	<!-- Import Trumbowyg -->
+    <script src='/js/trumbowyg/trumbowyg.js'></script>
+
+    <!-- Import all plugins you want AFTER importing jQuery and Trumbowyg -->
+    <script src='/js/trumbowyg/plugins/upload/trumbowyg.upload.js' async></script>
+	<script src='/js/trumbowyg/plugins/colors/trumbowyg.colors.min.js' async></script>
+	<script src='/js/trumbowyg/plugins/table/trumbowyg.table.min.js' async></script>
+	<script src='/js/trumbowyg/plugins/fontsize/trumbowyg.fontsize.min.js' async></script>
+	<script src='/js/trumbowyg/plugins/specialchars/trumbowyg.specialchars.min.js' async></script>
+
+	<script nonce="EHsqP5qHp3xkKEUJYnP1GbKtL/VLEbmIPNlCQDVPlTg=">
+		$(document).ready(function(){
+			(function($) {
+			    //for csrf
+			    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+			    var header = 'X-CSRF-TOKEN';
+				$.ajaxSetup({
+					beforeSend: function(xhr) {
+				        xhr.setRequestHeader("AJAX", true);
+				        //for csrf
+				        xhr.setRequestHeader(header, token);
+					},
+					error: function(xhr, status, err) {
+						if (xhr.status == 401) {
+				        	toastr.error("인증에 실패 했습니다.");
+
+				        } else if (xhr.status == 403) {
+				        	autoLogoutUser();
+				        	//toastr.error("세션이 만료가 되었습니다.");
+				        }
+					}
+				});
+			})(jQuery);
+
+			$(".logoutBtn").click(function(){
+	            $.ajax({
+	                type: "POST",
+	                url: "/main/logout",
+	                //data:{"ISAUTO":false},
+	                success: function() {
+	                    toastr.success("로그아웃 되었습니다.");
+	                    location.href="/main";
+	                }
+	            });
+	        });
+		});
+	</script>
+
+
+
+
+
+</head>
+<body>
+	<!-- wrapper Start -->
+
+	<!-- wrapper End -->
+
+<div class="wrap">
+	    
+
+
+
+
+
+
+
+
+
+
+	
+	<div id="sknavi">
+		
+			
+				<p><a href="#main-visual" tabindex="1">본문 바로가기</a></p>
+			
+			
+		
+		<p><a href="#gnb" tabindex="1">주메뉴 바로가기</a></p>
+	</div>
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="popupLayer" id="pop75" style="position:absolute;top:350px;left:550px;width:432px;height:639px;background: #fff;z-index:7500;">
+		<div class="popupBody">
+			
+			
+				
+				
+				
+				
+					
+					<img src="/upload/popupwindow/26919bf9e33d4268852f65310f23899d.jpg" alt="한파 6 대 행동요령 이렇게 행동하세요! 기상 상황 확인하기, 야외활동 자제, 따뜻한 장소 휴식, 외출 시 방한용품 착용, 수도관 동파예방, 주변 이웃 안전 살피기 국립목포해양대학교" />
+					
+					
+				
+			
+			
+			
+		</div>
+		<div class="popupFooter">
+			<button type="button" class="popupClose" data-id="pop75" data-type="L">닫기</button>
+			<button type="button" class="todayClose" data-id="pop75" data-type="L"> 24시간동안 열지않기</button>
+		</div>
+	</div>
+ 
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+
+
+	<div class='top-banner '>
+		<div class="inner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					
+						
+						
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+			
+				
+			
+				
+				
+					
+					
+						<div class="swiper-slide pos1 addIco">
+					<div class="item">
+						
+							
+							
+								<p class="ico"><img src="/images/main/common/topbanner2.png" alt="" ></p>
+							
+						
+						
+						
+						<div class="t1">
+							2026학년도 <span>해양</span>·<span>수산 최고경영자과정</span> 모집
+						</div>
+							<div class="t2">
+							1. 원서접수: 2025. 12. 10.(수) ~ 12. 31.(수)<br />2. 합격자발표: 2026. 1. 7.(수)<br />3. 등록기간: 2026. 1. 20.(화) ~ 1. 23.(금) 17:00
+						</div>
+						<div class="btns">
+							<a href="https://www.mmu.ac.kr/OA/contents/cpAdmission02" target="_blank" title="2026학년도 · 모집 바로가기 새창">바로가기</a>
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</div>
+				</div>
+					
+				
+
+			
+				
+				
+					
+					
+						<div class="swiper-slide pos2 addIco">
+					<div class="item">
+						
+							
+							
+								<p class="ico"><img src="/images/main/common/topbanner2.png" alt="" ></p>
+							
+						
+						
+						
+						<div class="t1">
+							2026년 1학기 1차 <span>국가장학금 신청</span> 기간 안내
+						</div>
+							<div class="t2">
+							1. 대상: 신입생(고3, 재수생 등 입학예정자), 재학생, 편입생, 재입학생, 복학생 등 모든 대학생<br />2. 기간: 2025. 11. 20.(목) 9시 ~ 12. 26.(금) 18시<br />3. 방법: 한국장학재단 누리집 및 모바일 앱에서 신청
+						</div>
+						<div class="btns">
+							<a href="https://www.kosaf.go.kr" target="_blank" title="2026년 1학기 1차  기간 안내 바로가기 새창">바로가기</a>
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</div>
+				</div>
+					
+				
+
+			
+				
+				
+					
+					
+						<div class="swiper-slide pos3 addIco">
+					<div class="item">
+						
+							
+							
+								<p class="ico"><img src="/images/main/common/topbanner2.png" alt="" ></p>
+							
+						
+						
+						
+						<div class="t1">
+							 2025학년도 <span>4대 폭력예방교육</span> 집중 이수기간 안내
+						</div>
+							<div class="t2">
+							1. 이수 마감: 2025년 12월 31일<br />2. 대상: 우리 대학 모든 구성원<br />3. 이수 방법: LMS 상시학습 또는 나라배움터<br />* 우리 대학 3년 연속 부진기관 선정(법정의무교육)
+						</div>
+						<div class="btns">
+							<a href="https://lms.mmu.ac.kr/" target="_blank" title=" 2025학년도  집중 이수기간 안내 바로가기 새창">바로가기</a>
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</div>
+				</div>
+					
+				
+
+			
+				
+				
+					
+					
+						<div class="swiper-slide pos4 addIco">
+					<div class="item">
+						
+							
+							
+								<p class="ico"><img src="/images/main/common/topbanner2.png" alt="" ></p>
+							
+						
+						
+						
+						<div class="t1">
+							2025학년도 겨울 계절학기  <span>평생교육원 수강생</span> 모집
+						</div>
+							<div class="t2">
+							1. 모집기간: 2025. 12. 1.(월) 10:00 ~ 12. 19.(금) 16:00<br />2. 납부기간: 2025. 12. 1.(월) 10:00 ~ 12. 19.(금) 17:00<br />3. 강의기간: 2025. 12. 23.(화)~ 2026. 2. 13.(금)/(8주)
+						</div>
+						<div class="btns">
+							<a href="https://www.mmu.ac.kr/OH" target="_blank" title="2025학년도 겨울 계절학기   모집 바로가기 새창">바로가기</a>
+							
+							
+							
+							
+							
+							
+							
+						</div>
+					</div>
+				</div>
+					
+				
+
+			
+			
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+				</div>
+				<!-- <p class="checkbox"><input type="checkbox" onClick="closeWin(1);">오늘 하루 열지 않기</p>  -->
+			</div>
+			<div class="controls">
+				<div class="box">
+					<button class="btn-play" title="슬라이드 정지">슬라이드 정지</button>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+  		<div class="swiper-button-prev"></div>
+
+			
+		</div>
+		<div class="bg-banner"></div>
+	</div>
+	
+	
+	<div class="searchWrap">
+		<div class="inner">
+			<form id="searchCommand" action="/main/search/all" method="post">
+				<label for="text">통합검색</label>
+				<input id="text" type="text" class="inp-srch" name="query" placeholder="검색어를 입력하세요.">
+				<button type="submit" class="btn-srch">검색</button>
+			<div>
+<input type="hidden" name="_csrf" value="01b526fc-8e3c-4172-9200-1153a2c1c1a6" />
+</div></form>
+		</div>
+	</div>
+	<div class="top">
+		<div class="inner">
+			<div class="sns">
+				<a href="https://www.instagram.com/mmu.ac.kr/" target="_blank"><img src="/images/main/main/ico_sns1.png" alt="인스타그램 새창 열림"></a>
+				
+				
+				<a href="https://www.youtube.com/channel/UCIv6et9zciX0LD-72qKboFg/" target="_blank"><img src="/images/main/main/ico_sns4.png" alt="유튜브 새창 열림"></a>
+			</div>
+			<div class="etc">
+				
+			
+				 <a href="/main/sso/login" target="_blank" class="portalLink">통합 로그인</a>
+			
+				<a href="/main">HOME</a>
+				<a href="/main/sitemap" class="sitemap">SITEMAP</a>
+				
+					
+					
+				<a href="/eng" class="eng">English</a>
+				
+				<button class="btn-banner"><span>팝업 닫기</span><i></i></button>
+				
+				<button class="searchBtn" id="searchOpen">검색열기</button>
+				<button class="searchBtn" id="searchClose">검색닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- // top -->
+	<div class="header">
+		<div class="inner">
+			<h1><a href="/main"><img src="/images/main/main/logo.png" alt="국립목포해양대학교"></a></h1>
+			<a class="btn-m ad-btn" href="/admission">입학정보 바로가기</a>
+			<div id="gnb">
+				<!--  nav 클래스는 모바일과 동일 소스 -->
+				<div class="nav">
+					<ul>	<li class='m1 flip'>		<a href='/main/menu/Introduction' class='btn-dep1  flip'><span>학교소개</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>학교소개</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/menu/president' class='flip'>열린총장실</a></dt>								<dd><a href='/main/contents/greeting'>인사말</a></dd>								<dd><a href='/main/contents/career'>약력</a></dd>								<dd><a href='/main/menu/pastPresident'>역대 총장·학장</a></dd>								<dd><a href='/main/board/247'>총장과의 대화</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/IntroMenu' class='flip'>대학소개</a></dt>								<dd><a href='/main/menu/eduDirection'>교육방향</a></dd>								<dd><a href='/main/menu/organization'>조직도/연혁</a></dd>								<dd><a href='/main/usrRegulation'>규정집</a></dd>								<dd><a href='/main/board/425'>대학 발전계획</a></dd>								<dd><a href='/main/board/427'>통계연보</a></dd>								<dd><a href='/main/board/439'>대학요람</a></dd>								<dd><a href='/main/menu/symbol'>상징물</a></dd>								<dd><a href='/main/menu/pptTemplet'>템플릿 및 서식</a></dd>								<dd><a href='/main/menu/safety'>대학안전관리</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/prHall' class='flip'>대학홍보관</a></dt>								<dd><a href='/main/board/300'>핫이슈</a></dd>								<dd><a href='/main/board/249'>홍보동영상</a></dd>								<dd><a href='/main/board/250'>브로슈어</a></dd>								<dd><a href='/main/board/251'>대학현황</a></dd>								<dd><a href='/main/board/253'>대학소식지</a></dd>								<dd><a href='/main/contents/gallery'>사이버갤러리</a></dd>								<dd><a href='/main/board/428'>국내교류/협약</a></dd>								<dd><a href='/main/menu/celebration'>개교 70주년 기념</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/locationMenu' class='flip'>캠퍼스안내</a></dt>								<dd><a href='/main/contents/guideMap'>대학안내도</a></dd>								<dd><a href='/main/vr'>캠퍼스 VR</a></dd>								<dd><a href='/main/location'>오시는 길</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m2 flip'>		<a href='/admission' target='_blank' title='입학정보 새창열림' class='btn-dep1  flip'><span>입학정보</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>입학정보</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/admission/contents/lastEarly' class='flip'>모집요강</a></dt>								<dd><a href='/admission/contents/lastEarly' target='_blank' title='2026학년도 수시 새창열림'>2026학년도 수시</a></dd>								<dd><a href='/admission/contents/lastRegular'>2026학년도 정시</a></dd>								<dd><a href='/admission/contents/overseasGist'>2026학년도 재외국민</a></dd>								<dd><a href='/admission/contents/foreignGist'>2026학년도 외국인</a></dd>								<dd><a href='/admission/contents/transferGist'>2025학년도 편입학</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/admission/contents/2023Result' target='_blank' title='입학자료 새창열림' class='flip'>입학자료</a></dt>								<dd><a href='/admission/contents/2024Result'>입학전형결과</a></dd>								<dd><a href='/admission/board/243' target='_blank' title='선원건강진단서 새창열림'>선원건강진단서</a></dd>								<dd><a href='/admission/board/244' target='_blank' title='입학자료실 새창열림'>입학자료실</a></dd>								<dd><a href='/admission/contents/militaryGuide' target='_blank' title='병역안내 새창열림'>병역안내</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/admission/board/245' target='_blank' title='입학도우미 새창열림' class='flip'>입학도우미</a></dt>								<dd><a href='/admission/board/245' target='_blank' title='공지사항 새창열림'>공지사항</a></dd>								<dd><a href='/admission/board/246' target='_blank' title='입학상담 새창열림'>입학상담</a></dd>								<dd><a href='/admission/board/313' target='_blank' title='자주하는질문 새창열림'>자주하는질문</a></dd>								<dd><a href='/admission/usrPresentation' target='_blank' title='입학설명회요청 새창열림'>입학설명회요청</a></dd>								<dd><a href='/admission/contents/gradeCal' target='_blank' title='성적산출 새창열림'>성적산출</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m3 flip'>		<a href='/main' class='btn-dep1  flip'><span>대학/대학원</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>대학/대학원</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/M0' class='flip'>해사대학</a></dt>								<dd><a href='/M1'>항해학부</a></dd>								<dd><a href='/M2'>해상운송학부</a></dd>								<dd><a href='/M3'>항해정보시스템학부</a></dd>								<dd><a href='/M5'>기관시스템공학부</a></dd>								<dd><a href='/M6'>해양경찰학부</a></dd>								<dd><a href='/M7'>해양메카트로닉스학부</a></dd>								<dd><a href='/M4'>해군사관학부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S0' class='flip'>해양공과대학</a></dt>								<dd><a href='https://mmu.ac.kr/S1'>컴퓨터공학과</a></dd>								<dd><a href='/S2'>조선해양공학과</a></dd>								<dd><a href='/S3'>환경·생명공학과</a></dd>								<dd><a href='/S4'>해양건설공학과</a></dd>								<dd><a href='/S11'>해양스포츠학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S9' class='flip'>해양산업융합학과</a></dt>								<dd><a href='/S9'>해양산업융합학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='https://mobility.mmu.ac.kr' class='flip'>첨단해양모빌리티학과</a></dt>								<dd><a href='https://mobility.mmu.ac.kr/'>첨단해양모빌리티학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S5' class='flip'>교양과정부</a></dt>								<dd><a href='/S5'>교양과정부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S6' class='flip'>승선실습과정부</a></dt>								<dd><a href='/S6'>승선실습과정부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/OA' class='flip'>일반대학원</a></dt>								<dd><a href='/OA'>일반대학원</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/OA' target='_blank' title='해양산업대학원 새창열림' class='flip'>해양산업대학원</a></dt>								<dd><a href='/OA'>해양산업대학원</a></dd>								<dd><a href='/OA'>해양·수산 최고경영자과정</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m4 flip'>		<a href='/main/menu/univGuide' class='btn-dep1  flip'><span>학사안내</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>학사안내</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/acschedule' class='flip'>학사일정</a></dt>								<dd><a href='/main/acschedule'>학사일정</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/eduInfoMenu' class='flip'>학사정보</a></dt>								<dd><a href='/main/menu/eduProcess'>교육과정</a></dd>								<dd><a href='/main/menu/eduInfo'>수업</a></dd>								<dd><a href='/main/menu/hakjj'>학적</a></dd>								<dd><a href='/main/menu/majorTrack'>전공·트랙</a></dd>								<dd><a href='/main/contents/teacherProcess2025'>교직과정</a></dd>								<dd><a href='/main/contents/studExchange'>학생교류 및 학점 상호인정</a></dd>								<dd><a href='/main/menu/gradu'>졸업·수료</a></dd>								<dd><a href='/main/menu/certificationMenu'>증명서발급</a></dd>								<dd><a href='/main/board/421'>서식 자료실</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/tuitionMenu' class='flip'>등록</a></dt>								<dd><a href='/main/menu/tuition'>등록</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/scholarshipMenu' class='flip'>장학 및 병무</a></dt>								<dd><a href='/main/contents/scholarship'>장학제도</a></dd>								<dd><a href='/main/menu/military'>병무</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m5 flip'>		<a href='/main/menu/universityLife' class='btn-dep1  flip'><span>대학생활</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>대학생활</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/menu/studentAct' class='flip'>학생활동</a></dt>								<dd><a href='/main/board/254'>대학생활안내</a></dd>								<dd><a href='/main/menu/saOrgan'>학생자치기구</a></dd>								<dd><a href='/main/menu/circle'>동아리</a></dd>								<dd><a href='/main/contents/yedodae'>예도대</a></dd>								<dd><a href='/main/contents/albatross'>관악단</a></dd>								<dd><a href='/main/menu/haesa'>해사대학생회</a></dd>								<dd><a href='/main/contents/oceanUniAss'>해양공과대학생회</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/facilityUse' class='flip'>시설물이용안내</a></dt>								<dd><a href='/main/contents/gym'>체육관</a></dd>								<dd><a href='/main/contents/studHall'>학생회관</a></dd>								<dd><a href='/main/contents/timetable'>학교버스시간표</a></dd>								<dd><a href='/main/contents/todayMenu'>오늘의 메뉴</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/infoServiceMenu' class='flip'>정보서비스</a></dt>								<dd><a href='/main/menu/wirelessLan'>무선랜 이용 안내</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m6 flip'>		<a href='https://www.mmu.ac.kr/main/board/301' class='btn-dep1  flip'><span>해성광장</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>해성광장</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='https://www.mmu.ac.kr/main/board/301' class='flip'>해성공지</a></dt>								<dd><a href='/main/board/301'>해성공지</a></dd>								<dd><a href='/main/board/302'>학사공지</a></dd>								<dd><a href='/main/board/393'>채용공지 </a></dd>								<dd><a href='/main/board/303'>장학공지</a></dd>								<dd><a href='/main/board/304'>취업공지</a></dd>								<dd><a href='/main/board/305'>인사공지</a></dd>								<dd><a href='/main/board/306'>정부포상 후보자 사전공개</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/bsBbs06' class='flip'>해성게시판</a></dt>								<dd><a href='/main/board/282'>해성게시판</a></dd>								<dd><a href='/main/board/283'>총학게시판</a></dd>								<dd><a href='/main/board/284'>해사대게시판</a></dd>								<dd><a href='/main/board/285'>공과대게시판</a></dd>								<dd><a href='/main/board/459'>총동아리연합회</a></dd>								<dd><a href='/main/board/460'>언론사게시판</a></dd>								<dd><a href='/main/board/461'>학생기구게시판</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/bsBbs05Menu' class='flip'>해성신문고</a></dt>								<dd><a href='/main/board/286'>해성신문고</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/partCommunicate' class='flip'>구성원 참여ㆍ소통 광장</a></dt>								<dd><a href='/main/contents/memberCommnuity'>구성원 참여소통</a></dd>								<dd><a href='/main/board/346'>주요 프로그램 안내</a></dd>								<dd><a href='/main/board/345'>정보제공과 성과공유</a></dd>								<dd><a href='/main/board/420'>요청 및 제안(C.R.P.)</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/disclosure' class='flip'>정보공개</a></dt>								<dd><a href='/main/contents/isOpen'>정보공개제도란</a></dd>								<dd><a href='/main/contents/whatIs'>청구/처리절차</a></dd>								<dd><a href='/main/contents/step'>수수료/신청서식</a></dd>								<dd><a href='/main/contents/object'>공개대상정보</a></dd>								<dd><a href='/main/board/308'>공개정보자료실</a></dd>								<dd><a href='/main/contents/claim'>정보공개청구(웹)</a></dd>								<dd><a href='/main/board/380'>정보목록</a></dd>								<dd><a href='/main/contents/offer'>공공데이터제공</a></dd>								<dd><a href='https://www.data.go.kr/' target='_blank' title='공공데이터포털 새창열림'>공공데이터포털</a></dd>								<dd><a href='/main/board/381'>정책실명제</a></dd>								<dd><a href='/main/board/426'>대학 자체평가</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/integrity' class='flip'>청렴센터</a></dt>								<dd><a href='/main/contents/integrity01'>청탁금지법 알아보기</a></dd>								<dd><a href='/main/contents/integrity05'>부패·공익신고자 보호제도</a></dd>								<dd><a href='/main/contents/integrity02'>청렴신문고</a></dd>								<dd><a href='/main/usrClean'>클린신고센터</a></dd>								<dd><a href='/main/board/291'>자료실</a></dd>								<dd><a href='https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=7000452' target='_blank' title='청렴포탈 부패공익신고 새창열림'>청렴포탈 부패공익신고</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li></ul>
+				</div>
+				<!-- // nav 클래스는 모바일과 동일 소스 -->
+			</div>
+			<a href="#" class="btn-m" title="사이트맵"></a>
+		</div>
+	</div>
+	<div class="m-gnb">
+		<div class="nav">
+			<ul>	<li class='m1 flip'>		<a href='/main/menu/Introduction' class='btn-dep1  flip'><span>학교소개</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>학교소개</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/menu/president' class='flip'>열린총장실</a></dt>								<dd><a href='/main/contents/greeting'>인사말</a></dd>								<dd><a href='/main/contents/career'>약력</a></dd>								<dd><a href='/main/menu/pastPresident'>역대 총장·학장</a></dd>								<dd><a href='/main/board/247'>총장과의 대화</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/IntroMenu' class='flip'>대학소개</a></dt>								<dd><a href='/main/menu/eduDirection'>교육방향</a></dd>								<dd><a href='/main/menu/organization'>조직도/연혁</a></dd>								<dd><a href='/main/usrRegulation'>규정집</a></dd>								<dd><a href='/main/board/425'>대학 발전계획</a></dd>								<dd><a href='/main/board/427'>통계연보</a></dd>								<dd><a href='/main/board/439'>대학요람</a></dd>								<dd><a href='/main/menu/symbol'>상징물</a></dd>								<dd><a href='/main/menu/pptTemplet'>템플릿 및 서식</a></dd>								<dd><a href='/main/menu/safety'>대학안전관리</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/prHall' class='flip'>대학홍보관</a></dt>								<dd><a href='/main/board/300'>핫이슈</a></dd>								<dd><a href='/main/board/249'>홍보동영상</a></dd>								<dd><a href='/main/board/250'>브로슈어</a></dd>								<dd><a href='/main/board/251'>대학현황</a></dd>								<dd><a href='/main/board/253'>대학소식지</a></dd>								<dd><a href='/main/contents/gallery'>사이버갤러리</a></dd>								<dd><a href='/main/board/428'>국내교류/협약</a></dd>								<dd><a href='/main/menu/celebration'>개교 70주년 기념</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/locationMenu' class='flip'>캠퍼스안내</a></dt>								<dd><a href='/main/contents/guideMap'>대학안내도</a></dd>								<dd><a href='/main/vr'>캠퍼스 VR</a></dd>								<dd><a href='/main/location'>오시는 길</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m2 flip'>		<a href='/admission' target='_blank' title='입학정보 새창열림' class='btn-dep1  flip'><span>입학정보</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>입학정보</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/admission/contents/lastEarly' class='flip'>모집요강</a></dt>								<dd><a href='/admission/contents/lastEarly' target='_blank' title='2026학년도 수시 새창열림'>2026학년도 수시</a></dd>								<dd><a href='/admission/contents/lastRegular'>2026학년도 정시</a></dd>								<dd><a href='/admission/contents/overseasGist'>2026학년도 재외국민</a></dd>								<dd><a href='/admission/contents/foreignGist'>2026학년도 외국인</a></dd>								<dd><a href='/admission/contents/transferGist'>2025학년도 편입학</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/admission/contents/2023Result' target='_blank' title='입학자료 새창열림' class='flip'>입학자료</a></dt>								<dd><a href='/admission/contents/2024Result'>입학전형결과</a></dd>								<dd><a href='/admission/board/243' target='_blank' title='선원건강진단서 새창열림'>선원건강진단서</a></dd>								<dd><a href='/admission/board/244' target='_blank' title='입학자료실 새창열림'>입학자료실</a></dd>								<dd><a href='/admission/contents/militaryGuide' target='_blank' title='병역안내 새창열림'>병역안내</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/admission/board/245' target='_blank' title='입학도우미 새창열림' class='flip'>입학도우미</a></dt>								<dd><a href='/admission/board/245' target='_blank' title='공지사항 새창열림'>공지사항</a></dd>								<dd><a href='/admission/board/246' target='_blank' title='입학상담 새창열림'>입학상담</a></dd>								<dd><a href='/admission/board/313' target='_blank' title='자주하는질문 새창열림'>자주하는질문</a></dd>								<dd><a href='/admission/usrPresentation' target='_blank' title='입학설명회요청 새창열림'>입학설명회요청</a></dd>								<dd><a href='/admission/contents/gradeCal' target='_blank' title='성적산출 새창열림'>성적산출</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m3 flip'>		<a href='/main' class='btn-dep1  flip'><span>대학/대학원</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>대학/대학원</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/M0' class='flip'>해사대학</a></dt>								<dd><a href='/M1'>항해학부</a></dd>								<dd><a href='/M2'>해상운송학부</a></dd>								<dd><a href='/M3'>항해정보시스템학부</a></dd>								<dd><a href='/M5'>기관시스템공학부</a></dd>								<dd><a href='/M6'>해양경찰학부</a></dd>								<dd><a href='/M7'>해양메카트로닉스학부</a></dd>								<dd><a href='/M4'>해군사관학부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S0' class='flip'>해양공과대학</a></dt>								<dd><a href='https://mmu.ac.kr/S1'>컴퓨터공학과</a></dd>								<dd><a href='/S2'>조선해양공학과</a></dd>								<dd><a href='/S3'>환경·생명공학과</a></dd>								<dd><a href='/S4'>해양건설공학과</a></dd>								<dd><a href='/S11'>해양스포츠학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S9' class='flip'>해양산업융합학과</a></dt>								<dd><a href='/S9'>해양산업융합학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='https://mobility.mmu.ac.kr' class='flip'>첨단해양모빌리티학과</a></dt>								<dd><a href='https://mobility.mmu.ac.kr/'>첨단해양모빌리티학과</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S5' class='flip'>교양과정부</a></dt>								<dd><a href='/S5'>교양과정부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/S6' class='flip'>승선실습과정부</a></dt>								<dd><a href='/S6'>승선실습과정부</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/OA' class='flip'>일반대학원</a></dt>								<dd><a href='/OA'>일반대학원</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/OA' target='_blank' title='해양산업대학원 새창열림' class='flip'>해양산업대학원</a></dt>								<dd><a href='/OA'>해양산업대학원</a></dd>								<dd><a href='/OA'>해양·수산 최고경영자과정</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m4 flip'>		<a href='/main/menu/univGuide' class='btn-dep1  flip'><span>학사안내</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>학사안내</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/acschedule' class='flip'>학사일정</a></dt>								<dd><a href='/main/acschedule'>학사일정</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/eduInfoMenu' class='flip'>학사정보</a></dt>								<dd><a href='/main/menu/eduProcess'>교육과정</a></dd>								<dd><a href='/main/menu/eduInfo'>수업</a></dd>								<dd><a href='/main/menu/hakjj'>학적</a></dd>								<dd><a href='/main/menu/majorTrack'>전공·트랙</a></dd>								<dd><a href='/main/contents/teacherProcess2025'>교직과정</a></dd>								<dd><a href='/main/contents/studExchange'>학생교류 및 학점 상호인정</a></dd>								<dd><a href='/main/menu/gradu'>졸업·수료</a></dd>								<dd><a href='/main/menu/certificationMenu'>증명서발급</a></dd>								<dd><a href='/main/board/421'>서식 자료실</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/tuitionMenu' class='flip'>등록</a></dt>								<dd><a href='/main/menu/tuition'>등록</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/scholarshipMenu' class='flip'>장학 및 병무</a></dt>								<dd><a href='/main/contents/scholarship'>장학제도</a></dd>								<dd><a href='/main/menu/military'>병무</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m5 flip'>		<a href='/main/menu/universityLife' class='btn-dep1  flip'><span>대학생활</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>대학생활</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='/main/menu/studentAct' class='flip'>학생활동</a></dt>								<dd><a href='/main/board/254'>대학생활안내</a></dd>								<dd><a href='/main/menu/saOrgan'>학생자치기구</a></dd>								<dd><a href='/main/menu/circle'>동아리</a></dd>								<dd><a href='/main/contents/yedodae'>예도대</a></dd>								<dd><a href='/main/contents/albatross'>관악단</a></dd>								<dd><a href='/main/menu/haesa'>해사대학생회</a></dd>								<dd><a href='/main/contents/oceanUniAss'>해양공과대학생회</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/facilityUse' class='flip'>시설물이용안내</a></dt>								<dd><a href='/main/contents/gym'>체육관</a></dd>								<dd><a href='/main/contents/studHall'>학생회관</a></dd>								<dd><a href='/main/contents/timetable'>학교버스시간표</a></dd>								<dd><a href='/main/contents/todayMenu'>오늘의 메뉴</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/infoServiceMenu' class='flip'>정보서비스</a></dt>								<dd><a href='/main/menu/wirelessLan'>무선랜 이용 안내</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li>	<li class='m6 flip'>		<a href='https://www.mmu.ac.kr/main/board/301' class='btn-dep1  flip'><span>해성광장</span></a>		<div class='submenu'>			<div class='title-box'>				<div>					<h2 class='h2-gnb'>						<strong>해성광장</strong>					</h2>					<p>대한민국을 넘어<br>세계의 중심으로 나아가는<br>국립목포해양대학교</p>				</div>			</div>			<div class='nav'>				<div>					<ul>						<li>							<dl>								<dt><a href='https://www.mmu.ac.kr/main/board/301' class='flip'>해성공지</a></dt>								<dd><a href='/main/board/301'>해성공지</a></dd>								<dd><a href='/main/board/302'>학사공지</a></dd>								<dd><a href='/main/board/393'>채용공지 </a></dd>								<dd><a href='/main/board/303'>장학공지</a></dd>								<dd><a href='/main/board/304'>취업공지</a></dd>								<dd><a href='/main/board/305'>인사공지</a></dd>								<dd><a href='/main/board/306'>정부포상 후보자 사전공개</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/bsBbs06' class='flip'>해성게시판</a></dt>								<dd><a href='/main/board/282'>해성게시판</a></dd>								<dd><a href='/main/board/283'>총학게시판</a></dd>								<dd><a href='/main/board/284'>해사대게시판</a></dd>								<dd><a href='/main/board/285'>공과대게시판</a></dd>								<dd><a href='/main/board/459'>총동아리연합회</a></dd>								<dd><a href='/main/board/460'>언론사게시판</a></dd>								<dd><a href='/main/board/461'>학생기구게시판</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/bsBbs05Menu' class='flip'>해성신문고</a></dt>								<dd><a href='/main/board/286'>해성신문고</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/partCommunicate' class='flip'>구성원 참여ㆍ소통 광장</a></dt>								<dd><a href='/main/contents/memberCommnuity'>구성원 참여소통</a></dd>								<dd><a href='/main/board/346'>주요 프로그램 안내</a></dd>								<dd><a href='/main/board/345'>정보제공과 성과공유</a></dd>								<dd><a href='/main/board/420'>요청 및 제안(C.R.P.)</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/disclosure' class='flip'>정보공개</a></dt>								<dd><a href='/main/contents/isOpen'>정보공개제도란</a></dd>								<dd><a href='/main/contents/whatIs'>청구/처리절차</a></dd>								<dd><a href='/main/contents/step'>수수료/신청서식</a></dd>								<dd><a href='/main/contents/object'>공개대상정보</a></dd>								<dd><a href='/main/board/308'>공개정보자료실</a></dd>								<dd><a href='/main/contents/claim'>정보공개청구(웹)</a></dd>								<dd><a href='/main/board/380'>정보목록</a></dd>								<dd><a href='/main/contents/offer'>공공데이터제공</a></dd>								<dd><a href='https://www.data.go.kr/' target='_blank' title='공공데이터포털 새창열림'>공공데이터포털</a></dd>								<dd><a href='/main/board/381'>정책실명제</a></dd>								<dd><a href='/main/board/426'>대학 자체평가</a></dd>							</dl>						</li>						<li>							<dl>								<dt><a href='/main/menu/integrity' class='flip'>청렴센터</a></dt>								<dd><a href='/main/contents/integrity01'>청탁금지법 알아보기</a></dd>								<dd><a href='/main/contents/integrity05'>부패·공익신고자 보호제도</a></dd>								<dd><a href='/main/contents/integrity02'>청렴신문고</a></dd>								<dd><a href='/main/usrClean'>클린신고센터</a></dd>								<dd><a href='/main/board/291'>자료실</a></dd>								<dd><a href='https://ncp.clean.go.kr/cmn/secCtfcKMC.do?menuCode=acs&mapAcs=Y&insttCd=7000452' target='_blank' title='청렴포탈 부패공익신고 새창열림'>청렴포탈 부패공익신고</a></dd>							</dl>						</li>					</ul>					<a href='#' class='btn-close'>닫기</a>				</div>			</div>		</div>	</li></ul>
+		</div>
+	</div>
+	<!-- // [DEV] PC gnb 의 nav 통째로 복사 -->
+	<div class="bg-m"></div>
+	<!-- // header -->
+
+
+	
+	
+	
+
+
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="quickmenu" class="quick_close">
+	<a href="javascript:void(0)" class="quick_btn" title="펼쳐보기"><i>펼쳐보기</i></a>
+	<ul class="qm_list">
+		<li><a href="javascript:void(0)"  class="tab_btn quicktab_btn">예비<br/>대학생</a>
+			<div class="qm_box" >
+				<ul class="ul03">
+					<li><a href="/admission" target="_blank"><i class="ic1"></i><span>입학정보</span></a></li>
+					<li><a href="/oneClick" target="_blank"><i class="ic11"></i><span>원클릭서비스</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/M0"><i class="ic8"></i><span>해사대학</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/S0"><i class="ic9"></i><span>해양공과대학</span></a></li>
+					<li><a href="/main/board/249"><i class="ic2"></i><span>홍보동영상</span></a></li>
+					<li><a href="/main/contents/tuition01"><i class="ic3"></i><span>등록금 정보</span></a></li>
+					<li><a href="/main/contents/scholarship"><i class="ic4"></i><span>장학제도</span></a></li>
+					<li><a href="/main/board/254"><i class="ic5"></i><span>대학생활안내</span></a></li>
+					<li><a href="/main/board/365"><i class="ic7"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/location"><i class="ic6"></i><span>찾아오시는길</span></a></li>
+				</ul>
+			</div>
+		</li>
+	    <li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">재학생</a>
+			<div class="qm_box" style="display:none;">
+				<ul class="ul01">
+<!--					<li><a target="_blank" href="/portal"><i class="ic10"></i><span>학생포털</span></a></li>  -->
+					<li><a target="_blank" href="/main/none/haksa"><i class="ic1"></i><span>학사행정서비스</span></a></li>
+					<li><a target="_blank" href="https://lms.mmu.ac.kr/"><i class="ic2"></i><span>학습관리시스템</span></a></li>
+					<li><a target="_blank" href="https://gps.mmu.ac.kr/"><i class="ic3"></i><span>GPS인재통합관리시스템</span></a></li>
+					<li><a target="_blank" href="https://lib.mmu.ac.kr/"><i class="ic4"></i><span>도서관</span></a></li>
+					<li><a target="_blank" href="https://mmu.certpia.com/"><i class="ic5"></i><span>인터넷증명발급</span></a></li>
+					<li><a target="_blank" href="https://www.safetyedu.org/Account/LogOn?UserAgencyNo=13"><i class="ic6"></i><span>사이버안전교육</span></a></li>
+					<li><a href="/main/contents/todayMenu"><i class="ic7"></i><span>오늘의 메뉴</span></a></li>
+					<li><a href="/main/contents/report"><i class="ic8"></i><span>시설물불편신고</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/main/board/307"><i class="ic2"></i><span>컴퓨터 119</span></a></li>
+					<li><a href="/main/board/365"><i class="ic8"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic9"></i><span>조직도</span></a></li>
+
+				</ul>
+			</div>
+		</li>
+		<li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">교직원</a>
+			<div class="qm_box">
+				<ul class="ul02">
+					<li><a target="_blank" href="/main/none/haksa"><i class="ic1"></i><span>학사행정서비스</span></a></li>
+					<li><a target="_blank" href="https://lms.mmu.ac.kr/"><i class="ic2"></i><span>학습관리시스템</span></a></li>
+					<li><a target="_blank" href="https://gps.mmu.ac.kr/"><i class="ic3"></i><span>GPS인재통합관리시스템</span></a></li>
+					<li><a href="https://mmu.korus.ac.kr/"><i class="ic4"></i><span>코러스시스템</span></a></li>
+					<li><a target="_blank" href="https://www.mmu.ac.kr/main/none/webmail"><i class="ic5"></i><span>웹메일</span></a></li>
+					<li><a href="/OC"><i class="ic13"></i><span>산학협력단</span></a></li>
+					<li><a target="_blank" href="https://research.mmu.ac.kr/main"><i class="ic6"></i><span>연구업적시스템</span></a></li>
+					<li><a target="_blank" href="/OG"><i class="ic7"></i><span>CTL(교수학습지원센터)</span></a></li>
+					<li><a target="_blank" href="https://www.safetyedu.org/Account/LogOn?UserAgencyNo=13"><i class="ic8"></i><span>사이버안전교육</span></a></li>
+					<li><a target="_blank" href="https://lib.mmu.ac.kr/"><i class="ic9"></i><span>도서관</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/main/board/307"><i class="ic2"></i><span>컴퓨터 119</span></a></li>
+					<li><a target="_blank" href="/data/mmu-1.zip" download><i class="ic10"></i><span>원격지원</span></a></li>
+					<li><a href="/main/board/365"><i class="ic12"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic11"></i><span>조직도</span></a></li>
+
+				</ul>
+			</div>
+		</li>
+		<li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">일반인<br/>(졸업생)</a>
+			<div class="qm_box">
+				<ul class="ul04">
+					<li><a target="_blank" href="https://mmu.certpia.com/"><i class="ic1"></i><span>인터넷증명발급</span></a></li>
+					<li><a href="/main/board/249"><i class="ic2"></i><span>홍보동영상</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic3"></i><span>조직도</span></a></li>
+					<li><a target="_blank" href="/OJ"><i class="ic4"></i><span>발전기금</span></a></li>
+					<li><a target="_blank" href="/OH"><i class="ic5"></i><span>평생교육원</span></a></li>
+					<li><a target="_blank" href="OI"><i class="ic6"></i><span>박물관</span></a></li>
+					<li><a target="_blank" href="http://www.mokpomu.or.kr/"><i class="ic7"></i><span>총동창회</span></a></li>
+					<li><a href="/main/board/365"><i class="ic9"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/location"><i class="ic8"></i><span>찾아오시는길</span></a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+  <a href="#" class="top_btn"><i></i> TOP</a>
+</div>
+<div id="quickmenu_m" class="quick_open">
+	<a href="javascript:void(0)" class="quick_btn" title="펼쳐보기"><i>펼쳐보기</i></a>
+	<ul class="qm_list">
+		<li><a href="javascript:void(0)"  class="tab_btn quicktab_btn">예비<br/>대학생</a>
+			<div class="qm_box" >
+				<ul class="ul03">
+					<li><a href="/admission" target="_blank"><i class="ic1"></i><span>입학정보</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/M0"><i class="ic8"></i><span>해사대학</span></a></li>
+					<li><a href="https://www.mmu.ac.kr/S0"><i class="ic9"></i><span>해양공과대학</span></a></li>
+					<li><a href="/main/board/249"><i class="ic2"></i><span>홍보동영상</span></a></li>
+					<li><a href="/main/contents/tuition01"><i class="ic3"></i><span>등록금 정보</span></a></li>
+					<li><a href="/main/contents/scholarship"><i class="ic4"></i><span>장학제도</span></a></li>
+					<li><a href="/main/board/254"><i class="ic5"></i><span>대학생활안내</span></a></li>
+					<li><a href="/main/board/365"><i class="ic8"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/location"><i class="ic6"></i><span>찾아오시는길</span></a></li>
+				</ul>
+			</div>
+		</li>
+	    <li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">재학생</a>
+			<div class="qm_box" >
+				<ul class="ul01">
+					<li><a target="_blank" href="/portal"><i class="ic10"></i><span>학생포털</span></a></li>
+					<li><a target="_blank" href="/main/none/haksa"><i class="ic1"></i><span>학사행정서비스</span></a></li>
+					<li><a target="_blank" href="https://lms.mmu.ac.kr/"><i class="ic2"></i><span>학습관리시스템</span></a></li>
+					<li><a target="_blank" href="https://gps.mmu.ac.kr/"><i class="ic3"></i><span>GPS인재통합관리시스템</span></a></li>
+					<li><a target="_blank" href="https://lib.mmu.ac.kr/"><i class="ic4"></i><span>도서관</span></a></li>
+					<li><a target="_blank" href="https://mmu.certpia.com/"><i class="ic5"></i><span>인터넷증명발급</span></a></li>
+					<li><a target="_blank" href="https://www.safetyedu.org/Account/LogOn?UserAgencyNo=13"><i class="ic6"></i><span>사이버안전교육</span></a></li>
+					<li><a href="/main/contents/todayMenu"><i class="ic7"></i><span>오늘의 메뉴</span></a></li>
+					<li><a href="/main/contents/report"><i class="ic8"></i><span>시설물불편신고</span></a></li>
+					<li><a href="/main/board/365"><i class="ic8"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic9"></i><span>조직도</span></a></li>
+
+				</ul>
+			</div>
+		</li>
+		<li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">교직원</a>
+			<div class="qm_box">
+				<ul class="ul02">
+					<li><a target="_blank" href="/main/none/haksa"><i class="ic1"></i><span>학사행정서비스</span></a></li>
+					<li><a target="_blank" href="https://lms.mmu.ac.kr/"><i class="ic2"></i><span>학습관리시스템</span></a></li>
+					<li><a target="_blank" href="https://gps.mmu.ac.kr/"><i class="ic3"></i><span>GPS인재통합관리시스템</span></a></li>
+					<li><a href="https://mmu.korus.ac.kr/"><i class="ic4"></i><span>코러스시스템</span></a></li>
+					<li><a target="_blank" href="https://www.mmu.ac.kr/main/none/webmail"><i class="ic5"></i><span>웹메일</span></a></li>
+					<li><a href="/OC"><i class="ic10"></i><span>산학협력단</span></a></li>
+					<li><a target="_blank" href="https://research.mmu.ac.kr/main"><i class="ic6"></i><span>연구업적시스템</span></a></li>
+					<li><a target="_blank" href="/OG"><i class="ic7"></i><span>CTL(교수학습지원센터)</span></a></li>
+					<li><a target="_blank" href="https://www.safetyedu.org/Account/LogOn?UserAgencyNo=13"><i class="ic8"></i><span>사이버안전교육</span></a></li>
+					<li><a target="_blank" href="https://lib.mmu.ac.kr/"><i class="ic9"></i><span>도서관</span></a></li>
+					<li><a target="_blank" href="/data/mmu-1.zip" download><i class="ic10"></i><span>원격지원</span></a></li>
+					<li><a href="/main/board/365"><i class="ic8"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic11"></i><span>조직도</span></a></li>
+
+				</ul>
+			</div>
+		</li>
+		<li> <a href="javascript:void(0)"  class="tab_btn quicktab_btn">일반인<br/>(졸업생)</a>
+			<div class="qm_box">
+				<ul class="ul04">
+					<li><a target="_blank" href="https://mmu.certpia.com/"><i class="ic1"></i><span>인터넷증명발급</span></a></li>
+					<li><a href="/main/board/249"><i class="ic2"></i><span>홍보동영상</span></a></li>
+					<li><a href="/main/contents/univOrgan"><i class="ic3"></i><span>조직도</span></a></li>
+					<li><a target="_blank" href="/OJ"><i class="ic4"></i><span>발전기금</span></a></li>
+					<li><a target="_blank" href="/OH"><i class="ic5"></i><span>평생교육원</span></a></li>
+					<li><a target="_blank" href="/OI"><i class="ic6"></i><span>박물관</span></a></li>
+					<li><a target="_blank" href="http://www.mokpomu.or.kr/"><i class="ic7"></i><span>총동창회</span></a></li>
+					<li><a href="/main/board/365"><i class="ic8"></i><span>홈페이지 개선신고</span></a></li>
+					<li><a href="/main/location"><i class="ic8"></i><span>찾아오시는길</span></a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+  <a href="#" class="top_btn"><i></i> TOP</a>
+</div>
+
+	<div class="main-visual" id="main-visual" >
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image:url(/images/main/main/main_bg7new.jpg)">
+					<div class="inner">
+						<!-- <div class="t1">목포해양대학교<strong>개교<img src="/images/main/main/visual_70.png">주년</strong></div> -->
+						<div class="t2">바다로 70년, 세계로 100년, 미래로 1,000년.<br>국립 목포해양대학교</div>
+					</div>
+				</div>
+				<!--<div class="swiper-slide" style="background-image:url(/images/main/main/main_bg4.jpg)">
+					<div class="inner">
+						 <div class="t1">목포해양대학교<strong>개교<img src="/images/main/main/visual_70.png">주년</strong></div>
+						<div class="t2">바다로 70년, 세계로 100년, 미래로 1,000년.<br>국립 목포해양대학교</div>
+					</div>
+				</div> -->
+				<div class="swiper-slide" style="background-image:url(/images/main/main/main_bg6.jpg)">
+					<div class="inner">
+						<!-- <div class="t1">목포해양대학교<strong>개교<img src="/images/main/main/visual_70.png">주년</strong></div> -->
+						<div class="t2">바다로 70년, 세계로 100년, 미래로 1,000년.<br>국립 목포해양대학교</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inner controls">
+			<div class="box">
+				<button class="btn-play" title="슬라이드 정지"></button>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // main-visual -->
+	<div class="main-addMenu">
+		<div class="inner">
+
+			<ul>
+				<li><a target="_blank" href="https://www.mmu.ac.kr/admission"><img src="/images/main/main/icon_11.png" alt=""><span>입학정보<br>(모집요강, 입시결과 등)</span></a></li>
+
+
+				<li><a target="_blank" href="/main/none/haksa"><img src="/images/main/main/icon_2.png" alt=""><span>학사행정서비스</span></a></li>
+				<li><a target="_blank" href="https://lms.mmu.ac.kr/"><img src="/images/main/main/icon_1.png" alt=""><span>학습관리시스템</span></a></li>
+				<li><a target="_blank" href="https://gps.mmu.ac.kr/"><img src="/images/main/main/icon_3.png" alt=""><span>GPS<br/>인재통합관리시스템</span></a></li>
+				<li>
+				<!-- <a target="_blank" href="https://mmu.korus.ac.kr/"><img src="/images/main/main/icon_6.png" alt=""><span>코러스시스템</span></a>  -->
+				
+					
+					
+						<a target="_blank" href="https://ssl.korus.kr"><img src="/images/main/main/icon_6.png" alt=""><span>코러스시스템</span></a>
+					
+				
+					</li>
+				<li><a target="_blank" href="/main/none/webmail"><img src="/images/main/main/icon_5.png" alt=""><span>웹메일</span></a></li>
+				<li><a target="_blank" href="https://mmu.certpia.com/"><img src="/images/main/main/icon_8.png" alt=""><span>인터넷증명발급</span></a></li>
+				<li><a target="_blank" href="https://lib.mmu.ac.kr/"><img src="/images/main/main/icon_10.png" alt=""><span>도서관</span></a></li>
+				<li><a target="_blank" href="/OP"><img src="/images/main/main/icon_7.png" alt=""><span>총장임용추천위원회</span></a></li>				 
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-notice">
+		<div class="inner">
+			
+			<h2 class="h2-main"><span>MMU</span> Notice</h2>
+			<div class="col-box">
+				<div class="news">
+					<div class="tabs">
+						<a href="/main/board/301" class="active" title="선택됨">해성공지</a>
+						
+						<a href="/main/board/302" >학사공지</a>
+						<a href="/main/board/303" >장학공지</a>
+						<a href="/main/board/393" >채용공지</a>
+						<a href="/main/board/304" >취업공지</a>
+					</div>
+					<div class="conts">
+						<div class="cont">
+							<h3 class="hide">해성공지</h3>
+							<ul>
+								
+									
+									
+									
+									
+									
+								
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li>
+				<a href="/main/board/301/read/86461">
+				<span>2025.12.16</span>
+				<!--
+					
+					
+						<span>20251216</span>
+					
+				-->
+				<div>2025학년도 겨울방학  중  승선생활관 이용 추가  모집안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/301/read/86457">
+				<span>2025.12.16</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>[국립대학육성사업] 우리가 만들고, 우리가 뽑는 최고의 수업 공모전 개최 안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/301/read/86438">
+				<span>2025.12.15</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>[RISE사업단] 2025년 동계 WAVE인턴쉽 프로그램 참가자 모집</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/301/read/86433">
+				<span>2025.12.15</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>2025년 마지막 헌혈의 기회!! 12월 17일 수요일~</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/301/read/86432">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>(2025 동계) 스파크인터내쇼날 인턴쉽 프로그램 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/301/read/86423">
+				<span>2025.12.12</span>
+				<!--
+					
+					
+						<span>20251212</span>
+					
+				-->
+				<div>[도서관] 추천도서 공모전 우수작 발표</div>
+				</a>
+			</li>
+			
+		
+	
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+							</ul>
+							<a href="/main/board/301" class="btn-more" title="해성공지">더보기 <span>+</span></a>
+						</div>
+						
+					<div class="cont" style="display: none">
+						<h3 class="hide">학사공지</h3>
+						<ul>
+							
+								
+								
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li>
+				<a href="/main/board/302/read/86463">
+				<span>2025.12.16</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>2025학년도 제2학기 기말시험 강의실변경 안내(기관시스템공학부)</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/302/read/86355">
+				<span>2025.12.08</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>2026학년도 제1학기 해사대학 승선실습 교과목 수강신청 안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/302/read/86331">
+				<span>2025.12.05</span>
+				<!--
+					
+					
+						<span>20251205</span>
+					
+				-->
+				<div>2026학년도 학부(과) 이동 지원 현황</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/302/read/86328">
+				<span>2025.12.05</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>★(수정) 2025학년도 2학기 출석인정 신청서(공무결석) 서류 제출 마감 기한 알림★</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/302/read/86299">
+				<span>2025.12.03</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>2025학년도 제2학기 기말시험 시간표 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/302/read/83746">
+				<span>2025.12.03</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>2025학년도 제2학기 기말강의평가 및 성적확인 일정 안내</div>
+				</a>
+			</li>
+			
+		
+	
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</ul>
+						<a href="/main/board/302"
+							class="btn-more" title="학사공지">더보기 <span>+</span></a>
+					</div>
+					<div class="cont" style="display: none">
+						<h3 class="hide">장학공지</h3>
+						<ul>
+							
+								
+								
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li>
+				<a href="/main/board/303/read/86462">
+				<span>2025.12.16</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>★★★ [국가장학금] 국가장학금 2유형(학업장려금) 신청인 동의서 제출 매뉴얼 ★★★ (12/19까지 미제출 시 지급 불가)</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/303/read/86429">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>[교외장학금] 한국농어촌희망재단 2026년 1학기 농림축산식품부 대학장학금 선발 안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/303/read/86424">
+				<span>2025.12.12</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>[국가근로] 2025학년도 제2학기 방학 중 교내 국가근로장학생 선발 결과 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/303/read/86356">
+				<span>2025.12.08</span>
+				<!--
+					
+					
+						<span>20251208</span>
+					
+				-->
+				<div>[교외장학금] 2026년 신규 협성장학생 선발 계획 안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/303/read/86272">
+				<span>2025.12.01</span>
+				<!--
+					
+						<span class="notice">공지</span>
+					
+					
+				-->
+				<div>[국가근로] 2025학년도 제2학기 방학 중 교외 국가근로장학생 선발 결과 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/303/read/86267">
+				<span>2025.12.01</span>
+				<!--
+					
+					
+						<span>20251201</span>
+					
+				-->
+				<div>[근로봉사] 2025학년도 제2학기 방학 중 교내 근로봉사장학생 선발 공고</div>
+				</a>
+			</li>
+			
+		
+	
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</ul>
+						<a href="/main/board/303"
+							class="btn-more" title="장학공지">더보기 <span>+</span></a>
+					</div>
+					<div class="cont" style="display: none">
+						<h3 class="hide">채용공지</h3>
+						<ul>
+							
+								
+								
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li>
+				<a href="/main/board/393/read/86459">
+				<span>2025.12.16</span>
+				<!--
+					
+					
+						<span>20251216</span>
+					
+				-->
+				<div>2025년 국립목포해양대학교 산업전환공동훈련센터 신규 전담직원 추가 채용시험 재공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/393/read/86446">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>2025년 국립목포해양대학교 산업전환공동훈련센터 신규 전담직원 채용시험 최종합격자 발표</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/393/read/86413">
+				<span>2025.12.11</span>
+				<!--
+					
+					
+						<span>20251211</span>
+					
+				-->
+				<div>2025년 국립목포해양대학교 산업전환공동훈련센터 신규 전담직원 채용시험 서류전형 합격자 발표 및 면접시험 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/393/read/86302">
+				<span>2025.12.03</span>
+				<!--
+					
+					
+						<span>20251203</span>
+					
+				-->
+				<div>2025년 산업전환공동훈련센터 신규 전담직원 추가 채용 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/393/read/86222">
+				<span>2025.11.27</span>
+				<!--
+					
+					
+						<span>20251127</span>
+					
+				-->
+				<div>(비전임교원) 2026년 협정대학 파견 객원교원 신규채용 공고</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/393/read/86197">
+				<span>2025.11.25</span>
+				<!--
+					
+					
+						<span>20251125</span>
+					
+				-->
+				<div>승선생활관 국가직조교 채용공고</div>
+				</a>
+			</li>
+			
+		
+	
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</ul>
+						<a href="/main/board/393"
+							class="btn-more" title="채용공지">더보기 <span>+</span></a>
+					</div>
+					<div class="cont" style="display: none">
+						<h3 class="hide">취업공지</h3>
+						<ul>
+							
+								
+								
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<li>
+				<a href="/main/board/304/read/86471">
+				<span>2025.12.17</span>
+				<!--
+					
+					
+						<span>20251217</span>
+					
+				-->
+				<div>[테크로스] 테크로스 신입사원 채용 공고(~12/31)</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/304/read/86460">
+				<span>2025.12.16</span>
+				<!--
+					
+					
+						<span>20251216</span>
+					
+				-->
+				<div>[이스트캠프] AI 모델 개발 국비 무료 실무 교육 과정 안내</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/304/read/86445">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>[KT에이블스쿨] KT 에이블스쿨 9기 모집</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/304/read/86444">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>[공주문화관광재단] 2026년 (재)공주문화관광재단 제1회 기간제근로자 채용 안내(~1/12)</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/304/read/86428">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>[해양수산부] 제4회 과학기술직 공무원 경력경쟁채용 공고(12/16~12/18 9시~18시 등기우편)</div>
+				</a>
+			</li>
+			
+		
+			<li>
+				<a href="/main/board/304/read/86427">
+				<span>2025.12.15</span>
+				<!--
+					
+					
+						<span>20251215</span>
+					
+				-->
+				<div>[BN KOREA] 해운대리점 사무직 채용 공고(~12/31)</div>
+				</a>
+			</li>
+			
+		
+	
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</ul>
+						<a href="/main/board/304"
+							class="btn-more" title="취업공지">더보기 <span>+</span></a>
+					</div>
+				</div>
+			</div>
+			<div>
+                         <div class="tmpBanner" style="padding: 0 0px 20px 30px;">
+					<a target="_blank"  href="/main/board/300/1/read/83553"><img alt="글로컬대학" src="/images/main/main/banner_glocal.jpg">글로컬대학 예비지정 선정</a>
+				</div>
+				<div class="banners only-pc">
+					<div class="swiper-container" style="height: 100%">
+						<div class="swiper-wrapper">
+							
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<div class="swiper-slide">
+			
+			
+				<a href="#" class="hrefNull">
+			
+					<img src="/upload/popupImage/ba0c2ce598964bf4be9c1f1b9b2a9460.jpg"  alt="전국 국공립대학 취업률 1위 86.2%">
+				</a>
+				<p class="hide"></p>
+			</div>
+		
+	
+	
+
+
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</div> 
+					</div>
+					<div class="inner controls">
+						<div class="box">
+							<button class="btn-play" title="슬라이드 정지">슬라이드 정지</button>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="vrArea1 only-pc1">
+					<a href="/main/board/249">홍보동영상</a>
+				</div>
+
+				
+			</div>
+		</div>
+		<div class="schedule-wrap">
+			<div>
+				<div class="banners only-m">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							
+								
+								
+								
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<div class="swiper-slide">
+			
+			
+				<a href="#" class="hrefNull">
+			
+					<img src="/upload/popupImage/ba0c2ce598964bf4be9c1f1b9b2a9460.jpg"  alt="전국 국공립대학 취업률 1위 86.2%">
+				</a>
+				<p class="hide"></p>
+			</div>
+		
+	
+	
+
+
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="vrArea1 only-m1">
+					<a href="/main/board/249">홍보동영상</a>
+				</div>
+
+				
+
+			</div>
+			<div class="schedule">
+				<h3 class="tit">
+					<span>MMU</span> Schedule
+				</h3>
+				<div class="year">
+					<dl>
+						<dt id="year"></dt>
+						<dd>
+							
+							<button id="moveMonthPrev" class="prev">이전달</button>
+							<strong id="month">12</strong>
+							
+							<button id="moveMonthNext" class="next">다음달</button>
+						</dd>
+					</dl>
+				</div>
+				<div class="slide">
+					<div class="swiper-container">
+						<div class="swiper-wrapper" id="schedule"></div>
+					</div>
+				</div>
+				<div class="btns">
+
+					<a href="/main/acschedule" class="more" title="MMU Schedule 더보기">더보기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- // MMU 소식 -->
+
+<div class="main-hot">
+	<div class="inner">
+		<h2 class="h2-main">
+			<span>MMU</span> Issue <a
+				href="/main/board/300" class="btn-more"
+				title="MMU Issue 더보기" style="text-indent: -99999px;">MMU Issue 더보기</a>
+		</h2>
+		<div class="slider">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					
+						
+						
+						
+						
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+-->
+<!-- <head>
+	<link rel="icon" type="image/png" href='/images/main/favicon.png'>
+</head>
+
+<script src='/js/exms/plugins/toastr/toastr.min.js'></script>-->
+
+
+
+
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86434">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/lr/main/thumb/f64e1417b8b44b4187e7d6628923d6c7.jpg" alt="[발전기금재단] 국립목포해양대학교 광주지역동창회, 발전기금 5백만원 기탁" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[발전기금재단] 국립목포해양대학교 광주지역동창회, 발전기금 5백만원 기탁</dt>
+					<dd>[발전기금재단] 국립목포해양대학교 광주지역동창회, 발전기금 5백만원 기탁...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86422">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/le/main/thumb/595780700ad2459f941f6d027d79d935.JPG" alt="[입학학생처] 2025학년도 (재)희양장학재단 장학증서 전달식 개최" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[입학학생처] 2025학년도 (재)희양장학재단 장학증서 전달식 개최</dt>
+					<dd>[입학학생처] 2025학년도 (재)희양장학재단 장학증서 전달식 개최 국립...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86417">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/le/main/thumb/218b9bdcf8b54197946a5b4ff61f36c2.jpg" alt="[인권센터] 인권센터, 교직원 대상 ‘2025학년도 4대 폭력예방통합교육’ 실시" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[인권센터] 인권센터, 교직원 대상 ‘2025학년도 4대 폭력예방통합교육’ 실시</dt>
+					<dd>[인권센터] 인권센터, 교직원 대상 ‘2025학년도 4대 폭력예방통합교육...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86396">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/lo/main/thumb/c348594d9ea441d495a0710a651bb7c4.jpg" alt="[인권센터] 인권센터, 보직교수 대상 폭력예방교육 실시" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[인권센터] 인권센터, 보직교수 대상 폭력예방교육 실시</dt>
+					<dd>[인권센터] 인권센터, 보직교수 대상 폭력예방교육 실시 국립목포해양대학교...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86383">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/oq/main/thumb/5feefbd67c6b4b8f8bc75d2c3466c9aa.JPG" alt="[GPS교육혁신본부] 국립목포해양대, ‘2025 마린 Edu 성과보고회’ 개최… 학생 주도 학습성과 공유" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[GPS교육혁신본부] 국립목포해양대, ‘2025 마린 Edu 성과보고회’ 개최… 학생 주도 학습성과 공유</dt>
+					<dd>[GPS교육혁신본부] 국립목포해양대, ‘2025 마린 Edu 성과보고회’...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+	<div class="swiper-slide">
+		
+			
+			
+				<a href="/main/board/300/read/86419">
+			
+				
+			<div class="img">
+				
+				
+					
+						
+							
+							
+								<img src="/upload/board/300/eoer/le/le/main/thumb/1180e9c924474392aa9967c987a3278c.jpg" alt="[항해학부] 국립목포해양대학교 항해학부, ‘제20회 대학생 해양사고 원인규명 토론대회’ 우수상 수상" >
+							
+						
+					
+					
+				
+			</div>
+			<div class="info">
+				<dl>
+					<dt>[항해학부] 국립목포해양대학교 항해학부, ‘제20회 대학생 해양사고 원인규명 토론대회’ 우수상 수상</dt>
+					<dd>[항해학부] 국립목포해양대학교 항해학부, ‘제20회 대학생 해양사고 원인...</dd>
+				</dl>
+			</div>
+		</a>
+	</div>
+	
+
+
+	    
+
+
+
+
+
+
+			
+			
+
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    //for csrf
+		    var token = '01b526fc-8e3c-4172-9200-1153a2c1c1a6';
+		    var header = 'X-CSRF-TOKEN';
+			$.ajaxSetup({
+				beforeSend: function(xhr) {
+			        xhr.setRequestHeader("AJAX", true);
+			        //for csrf
+			        xhr.setRequestHeader(header, token);
+				},
+				error: function(xhr, status, err) {
+					if (xhr.status == 401) {
+			        	toastr.error("인증에 실패 했습니다.");
+			            
+			        } else if (xhr.status == 403) {
+			        	autoLogoutUser();
+			        	//toastr.error("세션이 만료가 되었습니다.");
+			        }
+				}
+			});
+		})(jQuery);
+        
+		
+	});
+</script>
+
+
+
+				</div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+</div>
+<!-- // mmu 핫이슈 -->
+
+
+<script nonce="EHsqP5qHp3xkKEUJYnP1GbKtL/VLEbmIPNlCQDVPlTg=">
+	/* $('.scrollbar-inner').scrollbar(); */
+
+	// Main Visual
+	var mainSwiper = new Swiper('.main-visual .swiper-container', {
+		effect : 'fade',
+		loop : true,
+		autoplay : {
+			delay : 10000,
+			speed : 2000,
+			disableOnInteraction : false,
+		},
+		navigation : {
+			nextEl : '.main-visual .swiper-button-next',
+			prevEl : '.main-visual .swiper-button-prev',
+		},
+		pagination : {
+			el : '.main-visual .swiper-pagination',
+			clickable : true,
+			renderBullet : function(index, className) {
+				return '<span class="' + className + '">' + (index + 1)
+						+ '</span>';
+			},
+		},
+
+	});
+	$(".main-visual .btn-play").click(function() {
+		if ($(this).hasClass('active')) {
+			mainSwiper.autoplay.start();
+			$(this).removeClass('active');
+		} else {
+			mainSwiper.autoplay.stop();
+			$(this).addClass('active');
+		}
+
+	});
+	// 배너
+	var bannerSwiper1 = new Swiper('.banners.only-pc .swiper-container', {
+		loop : false,
+		autoplay : {
+			delay : 10000,
+			speed : 10000,
+			disableOnInteraction : false,
+		},
+		pagination : {
+			el : '.banners.only-pc .swiper-pagination',
+			clickable : true,
+		},
+
+	//autoplay: true,
+
+	});
+
+	$(".swiper-slide > a").on("focus", function() {
+		var slideIdx = $(this).parent().data("swiper-slide-index");
+		bannerSwiper1.slideTo(slideIdx, 0);
+	});
+
+	$(".only-pc .btn-play").click(function() {
+		if ($(this).hasClass('active')) {
+			bannerSwiper1.autoplay.start();
+			$(this).removeClass('active');
+		} else {
+			bannerSwiper1.autoplay.stop();
+			$(this).addClass('active');
+		}
+
+	});
+
+	var bannerSwiper2 = new Swiper('.banners.only-m .swiper-container', {
+		loop : true,
+		autoplay : {
+			delay : 5000,
+			speed : 5000,
+			disableOnInteraction : false,
+		},
+		pagination : {
+			el : '.banners.only-m .swiper-pagination',
+			clickable : true,
+		},
+
+	//autoplay: true,
+
+	});
+
+	// Quick Menu
+	$('.main-quick .tabs a').click(
+			function() {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.main-quick .conts > div').eq($(this).index()).show()
+						.siblings().hide();
+				return false;
+			})
+
+	var hotissue = new Swiper('.main-hot .slider .swiper-container', {
+		loop : false,
+		slidesPerView : '4',
+		spaceBetween : 8,
+		breakpoints : {
+			1024 : {
+				spaceBetween : 8,
+				slidesPerView : '4',
+			},
+			767 : {
+				spaceBetween : 4,
+				slidesPerView : '2',
+			},
+			400 : {
+				spaceBetween : 4,
+				slidesPerView : '1',
+			}
+
+		},
+		navigation : {
+			nextEl : '.main-hot .slider .swiper-button-next',
+			prevEl : '.main-hot .slider .swiper-button-prev',
+		},
+		observer : true,
+		observeParents : true,
+	});
+
+	$(".swiper-slide > a").on("focus", function() {
+		var slideIdx = $(this).parent().data("swiper-slide-index");
+		hotissue.slideTo(slideIdx, 0);
+	});
+
+	var quickSwiper2 = new Swiper('.main-quick2 .slider .swiper-container', {
+		loop : true,
+		slidesPerView : 6,
+		spaceBetween : 8,
+		breakpoints : {
+			1024 : {
+				spaceBetween : 8,
+				slidesPerView : '4',
+			},
+			767 : {
+				spaceBetween : 4,
+				slidesPerView : '2',
+			}
+		},
+		navigation : {
+			nextEl : '.main-quick2 .slider .swiper-button-next',
+			prevEl : '.main-quick2 .slider .swiper-button-prev',
+		},
+		observer : true,
+		observeParents : true,
+	});
+
+	/*	var quickSwiper3 = new Swiper('.main-quick .slider3 .swiper-container', {
+	loop: true,
+	slidesPerView: '6',
+	spaceBetween: 8,
+	breakpoints: {
+		1024: {
+		spaceBetween: 8,
+		  slidesPerView: '4',
+		},
+		767: {
+		spaceBetween: 4,
+		  slidesPerView: '2',
+		}
+	},
+	navigation: {
+		nextEl: '.main-quick .slider3 .swiper-button-next',
+		prevEl: '.main-quick .slider3 .swiper-button-prev',
+	  },
+		observer: true,
+		observeParents: true,
+	});
+
+	var quickSwiper4 = new Swiper('.main-quick .slider4 .swiper-container', {
+	loop: true,
+	slidesPerView: '6',
+	spaceBetween: 8,
+	breakpoints: {
+		1024: {
+		spaceBetween: 8,
+		  slidesPerView: '4',
+		},
+		767: {
+		spaceBetween: 4,
+		  slidesPerView: '2',
+		}
+	},
+	navigation: {
+		nextEl: '.main-quick .slider4 .swiper-button-next',
+		prevEl: '.main-quick .slider4 .swiper-button-prev',
+	  },
+		observer: true,
+		observeParents: true,
+	});
+
+	var quick2Swiper= new Swiper('.main-quick2 .swiper-container', {
+	loop: true,
+	slidesPerView: '8',
+	spaceBetween: 8,
+	breakpoints: {
+		1024: {
+		spaceBetween: 10,
+		  slidesPerView: '6',
+		},
+		767: {
+		spaceBetween: 10,
+		  slidesPerView: '3',
+		}
+	},
+	navigation: {
+		nextEl: '.main-quick2 .swiper-button-next',
+		prevEl: '.main-quick2 .swiper-button-prev',
+	  },
+
+	}); */
+
+	// 하단 바로가기
+	var footLinks = new Swiper('.main-foot .swiper-container', {
+		pagination : {
+			el : '.main-foot .swiper-pagination',
+			clickable : true,
+		},
+		slidesPerView : '5',
+		breakpoints : {
+			640 : {
+				slidesPerView : 2,
+				spaceBetween : 0,
+			}
+		}
+	});
+
+	// 알림마당 탭기능
+	$('.main-notice .tabs a').click(
+			function() {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.main-notice .conts > div').eq($(this).index()).fadeIn(300)
+						.siblings().hide();
+				return false;
+			})
+</script>
+
+<script nonce="EHsqP5qHp3xkKEUJYnP1GbKtL/VLEbmIPNlCQDVPlTg=">
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = new String(date.getMonth() + 1);
+
+	// 한자리수일 경우 0을 채워준다.
+	if (month.length == 1)
+		month = "0" + month;
+	$("#year").html(year);
+	$("#month").text(month);
+
+	var tMonth = year + "-" + month;
+
+	getSchedule();
+
+	function getSchedule() {
+		$.ajax({
+			url : "/main/scheduleList",
+			data : {
+				"searchDt" : tMonth,
+				"recordCnt" : 999
+			},
+			dataType : "json",
+			success : function(data) {
+				var html = "";
+				for (var i = 0; i < data.list.length; i++) {
+					var sttDt = data.list[i].frdt;
+					var endDt = data.list[i].todt;
+					var dateStr = sttDt.substring(5, 7) + "."
+							+ sttDt.substring(8, 10) + ".(" + getWeek(sttDt)
+							+ ")";
+
+					if (endDt.length > 9 && sttDt != endDt)
+						dateStr += " - " + endDt.substring(5, 7) + "."
+								+ endDt.substring(8, 10) + ".("
+								+ getWeek(endDt) + ")";
+
+					html += "<div class=\"swiper-slide\">";
+					html += "	<dl>";
+					html += "		<dt>" + dateStr + "</dt>";
+					html += "		<dd>" + data.list[i].title + "</dd>";
+					html += "</div>";
+				}
+				if (html.length < 1)
+					$('#schedule').html("<dl><dt>일정이 없습니다.</dt></dl>");
+				else
+					$('#schedule').html(html);
+			}
+		});
+
+		scheduleSwiper()
+	}
+
+	function getWeek(tDate) {
+		var week = [ '일', '월', '화', '수', '목', '금', '토' ];
+		var dayOfWeek = week[new Date(tDate).getDay()];
+		return dayOfWeek;
+	}
+
+	function moveMonth(flag) {
+
+		var dt = new Date(tMonth + "-01");
+		var todt = new Date(dt.setMonth(dt.getMonth() + flag));
+
+		var yy = todt.getFullYear();
+		var mm = new String(todt.getMonth() + 1);
+		if (mm.length == 1)
+			mm = "0" + mm;
+
+		$("#year").html(yy);
+		$("#month").text(mm);
+
+		tMonth = yy + "-" + mm;
+
+		getSchedule();
+	}
+
+	function scheduleSwiper() {
+		var scheduleSwiper = new Swiper('.schedule .swiper-container', {
+			loop : false,
+			pagination : {
+				el : '.schedule .swiper-pagination',
+				clickable : true,
+			},
+			slidesPerView : 3,
+			spaceBetween : 30,
+			breakpoints : {
+				610 : {
+					slidesPerView : 2,
+				}
+			},
+			/*autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+			 }, */
+			navigation : {
+				nextEl : '.schedule .swiper-button-next',
+				prevEl : '.schedule .swiper-button-prev',
+			},
+
+		});
+	}
+	$('#moveMonthPrev').click(function() {
+		moveMonth(-1);
+	});
+	$('#moveMonthNext').click(function() {
+		moveMonth(1);
+	});
+</script>
+
+	    
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	<div id="footer">
+		<div class="footer1">
+			<div class="inner">
+				<div class="select-box">
+					<button class="linkBtn">대학/대학원</button>
+					<div class="select-box_list">
+						<div class="inner">
+							<div class="cont">
+								<div>
+									<span>해사대학</span>
+									<ul class="linkUl">
+										<li><a href="/M1" target="_blank">항해학부</a></li>
+										<li><a href="/M2" target="_blank">해상운송학부</a></li>
+										<li><a href="/M3" target="_blank">항해정보시스템학부</a></li>
+										<li><a href="/M5" target="_blank">기관시스템공학부</a></li>
+										<li><a href="/M6" target="_blank">해양경찰학부</a></li>
+										<li><a href="/M7" target="_blank">해양메카트로닉스학부</a></li>
+										<li><a href="/M4" target="_blank">해군사관학부</a></li>
+									</ul>
+									<span>해양공과대학</span>
+									<ul class="linkUl">
+										<li><a href="/S1" target="_blank">컴퓨터공학과</a></li>
+										<li><a href="/S2" target="_blank">조선해양공학과</a></li>
+										<li><a href="/S3" target="_blank">환경·생명공학과</a></li>
+										<li><a href="/S4" target="_blank">해양건설공학과</a></li>
+										<li><a href="/S11" target="_blank">해양스포츠·레저융합학과</a></li>										
+									</ul>
+									<span>해양산업융합학과</span>
+									<ul class="linkUl">
+										<li><a href="/S9" target="_blank">해양산업융합학과</a></li>
+									</ul>
+									<span>첨단해양모빌리티학과</span>
+									<ul class="linkUl">
+										<li><a href="https://mobility.mmu.ac.kr" target="_blank">첨단해양모빌리티학과</a></li>
+									</ul>
+									<span>교양과정부</span>
+									<ul class="linkUl">
+										<li><a href="/S5" target="_blank">교양과정부</a></li>
+									</ul>
+									<span>승선실습과정부</span>
+									<ul class="linkUl">
+										<li><a href="/S6" target="_blank">승선실습과정부</a></li>
+									</ul>
+									<span>일반대학원</span>
+									<ul class="linkUl">
+										<li><a href="/OA/contents/geDept01" target="_blank">해상운송시스템학과</a></li>
+										<li><a href="/OA/contents/geDept02" target="_blank">기관시스템공학과</a></li>
+										<li><a href="/OA/contents/geDept03" target="_blank">해양경찰학과</a></li>
+										<li><a href="/OA/contents/geDept04" target="_blank">해양전자·통신·컴퓨터공학과</a></li>
+										<li><a href="/OA/contents/geDept05" target="_blank">해양시스템공학과</a></li>
+									</ul>
+									<span>해양산업대학원</span>
+									<ul class="linkUl">
+										<li><a href="/OA/contents/ocDept01" target="_blank">해상운송시스템학과</a></li>
+										<li><a href="/OA/contents/ocDept02" target="_blank">기관시스템공학과</a></li>
+										<li><a href="/OA/contents/ocDept03" target="_blank">해양경찰학과</a></li>
+										<li><a href="/OA/contents/ocDept04" target="_blank">해양전자·통신공학과</a></li>
+										<li><a href="/OA/contents/ocDept05" target="_blank">해양시스템공학과</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="linkBtn">대학기구</button>
+					<div class="select-box_list">
+						<div class="inner">
+							<div class="cont">
+								<div>
+									<span>대학본부</span>
+									<ul class="linkUl">
+										<li><a href="/main/contents/aaOffice01" target="_blank">교무처</a></li>
+										<li><a href="/main/contents/saOffice01" target="_blank">입학학생처</a></li>
+										<li><a href="/main/contents/plOffice01" target="_blank">기획조정처</a></li>
+										<li><a href="/main/contents/exOffice01" target="_blank">사무국</a></li>
+										<li><a href="/OD" target="_blank">취업실습본부</a></li>
+										<li><a href="/OE" target="_blank">국제교류본부</a></li>
+										<li><a href="/OB" target="_blank">GPS교육혁신본부</a></li>
+									</ul>
+									<span>직속기구</span>
+									<ul class="linkUl">
+										<li><a href="/main/contents/ssIntro" target="_blank">창업지원단</a></li>
+										<li><a href="/main/contents/HumanIntroduction" target="_blank">인권센터</a></li>
+										<li><a>해양에너지사업단</a></li>
+										<li><a>친환경스마트선박육성사업단</a></li>
+									</ul>
+									<span>위원회</span>
+									<ul class="linkUl">
+										<li><a href="/main/contents/aaOffice01" target="_blank">교수회</a></li>
+										<li><a href="/main/contents/aaOffice01" target="_blank">교무회</a></li>
+										<li><a href="/main/contents/urcIntro" target="_blank">대학평의원회</a></li>
+										<li><a href="/main/contents/srcIntro" target="_blank">교수평의회</a></li>
+										<li><a href="/main/contents/tuitionIntro" target="_blank">등록금심의위원회</a></li>
+										<li><a href="/main/contents/budgetIntro" target="_blank">예산조정위원회</a></li>
+										<li><a href="/main/contents/financeIntro" target="_blank">재정위원회</a></li>
+									</ul>
+									<span>교육기본시설</span>
+									<ul class="linkUl">
+										<li><a href="http://lib.mmu.ac.kr" target="_blank">도서관</a></li>
+										<li><a href="/main/contents/iccIntro" target="_blank">정보전산원</a></li>
+										<li><a href="/main/contents/gym" target="_blank">체육관</a></li>
+										<li><a href="/main/contents/studHall" target="_blank">학생회관</a></li>
+									</ul>
+									<span>지원시설</span>
+									<ul class="linkUl">
+										<li><a href="/main/contents/boarding01" target="_blank">승선생활관</a></li>
+										<li><a href="/OL" target="_blank">공대생활관</a></li>
+										<li><a href="/main/contents/msIntro" target="_blank">마린시뮬레이션센터</a></li>
+										<li><a href="/main/contents/efIntro" target="_blank">기관공장</a></li>
+									</ul>
+									<span>부속시설</span>
+									<ul class="linkUl">
+										<li><a href="/OI" target="_blank">박물관</a></li>
+										<li><a href="/OF" target="_blank">학생상담센터</a></li>
+										<li><a href="/OQ" target="_blank">학생군사교육단</a></li>
+										<!--	<li><a href="/OC" target="_blank">산학협력단</a></li>-->
+										<li><a href="/OH" target="_blank">평생교육원</a></li>
+										<li><a href="/main/contents/tsIntro" target="_blank">실습선</a></li>
+										<li><a href="/main/contents/lsIntro" target="_blank">해양레포츠센터</a></li>
+										<li><a href="/OT" target="_blank">교원양성지원센터</a></li>
+										<li><a href="/main/contents/lcIntro" target="_blank">지역소통센터</a></li>
+										<li><a href="/OR" target="_blank">현장실습지원센터</a></li>
+										<!-- <li><a>선원정책연구센터</a></li>
+										<li><a>해기품질관리센터</a></li>-->
+									</ul>
+									<span>기타기구</span>
+									<ul class="linkUl">
+										<li><a href="/OK" target="_blank">장애학생지원센터</a></li>
+										<li><a href="/OJ" target="_blank">발전기금재단</a></li>
+										<li><a href="/main/contents/reporter" target="_blank">대학언론사</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="linkBtn">연구소/센터</button>
+					<div class="select-box_list">
+						<div class="inner">
+							<div class="cont">
+								<div>
+									<span>연구시설</span>
+									<ul class="linkUl">
+										<li><a href="http://www.mri-mmu.ac.kr/" target="_blank">해양산업연구소</a></li>
+										<li><a href="http://www.meri-mmu.ac.kr/" target="_blank">기계전자기술연구소</a></li>
+									</ul>
+									<a href="/OC" target="_blank"><span>산학협력단</span></a>
+									<ul class="linkUl">
+										<li><a href="/OC/contents/sme01" target="_blank">중소기업산학협력센터</a></li>
+										<li><a href="/OC/contents/stlyacht01" target="_blank">국립목포해양대학교산학협력단 요트조종면허시험장</a></li>
+										<li>녹색해양기자재사업단</li>
+										<li><a href="/OC/contents/mtsd01" target="_blank">해상교통안전진단사업단</a></li>
+										<li>국제해사연구사업단</li>
+										<li><a href="/OC/contents/port01" target="_blank">해운항만물류전문<br>인력양성사업단</a></li>
+										<li><a href="https://www.honamsg.org/" target="_blank">전남SeaGrant센터</a></li>
+										<li><a href="/OU" target="_blank">선박수리지원센터</a></li>
+										<li><a href="/OC/contents/leisure01" target="_blank">해양레저산업취업맞춤형 융합창의인력양성사업단</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="linkBtn">대학관련 웹사이트</button>
+					<div class="select-box_list">
+						<div class="inner">
+							<div class="cont">
+								<div>
+									<ul>
+										<li><a href="https://www.facebook.com/mmubadasemi/" target="_blank">바다세미(사이버홍보단)</a></li>
+										<!--	<li><a href="http://mmunews.itsbiz.co.kr/" target="_blank">학보사</a></li>-->
+										<!--	<li><a href="http://yedodae.com/" target="_blank">예도대</a></li>-->
+										<li><a href="http://www.mokpomu.or.kr/" target="_blank">총동창회</a></li>
+										<li><a href="http://mmuo.net/" target="_blank">재경동창회</a></li>
+										<!-- <li><a href="https://cafe.daum.net/mmumariner" target="_blank">해사대 학부모 연합회</a></li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="inner">
+				<div class="fl">
+					<a href="/main/main/contents/privacy01">개인정보처리방침</a>
+					<a href="/main/contents/videoInfo">영상정보처리기기운영관리방침</a><br class="m">
+					<a href="/main/board/288">개인정보보호 및 취급안내</a>
+					<a href="http://www.academyinfo.go.kr/popup/pubinfo1690/list.do?schlId=0000012" target="_blank">대학정보공시</a><br class="m">
+					<a href="/main/contents/telephone">전화번호</a>
+					<a href="/main/location">오시는길</a>
+					<a href="/main/menu/Qna">질의응답</a>
+					<a href="/main/main/contents/integrity01">청렴센터</a>
+					<a href="/main/board/508">대학안전관리</a>
+					<a href="/main/board/307">컴퓨터119</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer2">
+			<div class="inner">
+				<div class="logo"><img src="/images/main/main/t_logo.png" alt="국립목포해양대학교"></div>
+				<div class="addr"><p>58628  전라남도 목포시 해양대학로 91 <br class="m">TEL. 061-240-7114  FAX. 061-242-5176</p>
+								Copyright © Mokpo National Maritime University. <br class="m">All Right Reserved.</div>
+				<!--<div class="webmark"><img src="/images/common/webmark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></div>-->
+				<div class="webmark"><a href="/images/common/webmark.pdf" target="_blank" title="pdf 파일보기" tabindex="0"><img src="/images/common/webmark.png" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"></a></div> 
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Google tag (gtag.js) -->
+	<!--
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EV1TS38LMC"></script>
+	<script nonce="EHsqP5qHp3xkKEUJYnP1GbKtL/VLEbmIPNlCQDVPlTg=">
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-EV1TS38LMC');
+	</script>
+	-->
+
+
+	    
+				
+
+
+
+
+
+
+
+
+
+
+			
+
+
+    	<script nonce="EHsqP5qHp3xkKEUJYnP1GbKtL/VLEbmIPNlCQDVPlTg=">
+            toastr.options = {
+              "closeButton": true,
+              "debug": false,
+              "progressBar": true,
+              "preventDuplicates": false,
+              "positionClass": "toast-bottom-full-width",
+              "showDuration": "400",
+              "hideDuration": "100000",
+              "timeOut": "7000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            };
+        </script>
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<script>
+setTimeout(function() {
+	if ($("#toast-container").length) {
+		$(".toast-close-button").attr("aria-label", "닫기");
+		$("#toast-container").attr({
+			"role": "alert",
+			"aria-live": "assertive"
+		})
+	}
+}, 0)
+</script>
+
+</div>
+</body>
+</html>
